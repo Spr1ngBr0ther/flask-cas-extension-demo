@@ -13,6 +13,7 @@ if __name__ == "__main__":
         install_requires = [
             "flask",
             "flask-bootstrap",
+            "flask-cas",
             "gunicorn",
         ],
         include_package_data=True,

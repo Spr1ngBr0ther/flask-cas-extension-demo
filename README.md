@@ -1,13 +1,13 @@
-# flask-cas-demo
+# flask-cas-extension-demo
 
-A simple flask app to demo CAS login
+A simple flask app to demo CAS login using the Flask-CAS extension
 
-[Live demo](http://flask-cas-demo.cameronbwhite.com)
+[Live demo](http://flask-cas-extension-demo.cameronbwhite.com)
 
 ## Installation
 
-1. Clone it `git clone https://github.com/cameronbwhite/flask-cas-demo`
-2. Enter it `cd flask-cas-demo`
+1. Clone it `git clone https://github.com/cameronbwhite/flask-cas-extension-demo`
+2. Enter it `cd flask-cas-extension-demo`
 3. Create python virtual environment `virtualenv venv`
 4. Activate virtual environment `source venv/bin/activate`
 5. Install it and dependencies `python setup.py install`
