@@ -23,19 +23,18 @@ up to run on Heroku.
 If your CAS is located at `https://sso.pdx.edu/`
 
 ```sh
-python app.py --debug True --cas_server "https://sso.pdx.edu"
+python app.py --debug True
 ```
 
 ### Gunicorn
 
 If your CAS is located at `https://sso.pdx.edu/`
 
-You need to add two environment variables `CAS_SERVER` and `SECRET_KEY`
+You need to add an environment variable `SECRET_KEY`
 before you can run gunicorn.
 
-1. Add `CAS_SERVER` `export CAS_SERVER="https://sso.pdx.edu/"`
-2. Add `SECRET_KEY` `export SECRET_KEY=[its a secret]`
-3. Run it `gunicorn app:app`
+1. Add `SECRET_KEY` `export SECRET_KEY=[its a secret]`
+2. Run it `gunicorn app:app`
 
 ### Heroku
 
