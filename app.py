@@ -3,8 +3,6 @@
 # -*- coding: utf-8 -*-
 
 import argparse 
-import urlparse
-import urllib
 import logging
 import os
 
@@ -16,7 +14,7 @@ import flask_cas
 
 app = Flask(__name__)
 flask_bootstrap.Bootstrap(app)
-flask_cas.CAS(app)
+cas = flask_cas.CAS(app)
 app.logger.addHandler(logging.StreamHandler())
 app.secret_key = os.environ.get('SECRET_KEY', None)
 app.config['CAS_SERVER'] = os.environ.get('CAS_SERVER', None)
@@ -26,7 +24,7 @@ app.config['CAS_AFTER_LOGIN'] = 'route_root'
 def route_root():
     return flask.render_template(
         'layout.html',
-        username = flask.session.get(app.config['CAS_USERNAME_SESSION_KEY'], None),
+        username = cas.username,
     )
 
 def create_parser():
