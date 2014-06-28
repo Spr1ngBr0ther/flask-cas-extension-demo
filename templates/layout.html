@@ -17,15 +17,6 @@
                 </button>
                 <a class="navbar-brand" href="#">Flask CAS Extension Demo</a>
             </div>
-            <div class="navbar-right">
-                <ul class="nav navbar-nav">
-                {% if username is defined and username -%}
-                <li><a href="/logout/">Logout</a></li>
-                {% else -%}
-                <li><a href="/login/">Login</a></li>
-                {% endif -%}
-                </ul>
-            </div>
         </div><!--/.nav-collapse -->
     </div>
 {%- endblock %}
@@ -35,9 +26,11 @@
             {% if username is defined and username  -%}
             <h1>Logged In</h1>
             <p>You are logged in as {{username}}</p>
+            <a type=button class="btn btn-default" href="/logout/">Logout</a>
             {% else %}
             <h1>Logged Out</h1>
             <p>You are not logged in</p>
+            <a type=button class="btn btn-default" href="/login/">Login</a>
             {%- endif %}
         </div>
     </div><!--/.container -->
