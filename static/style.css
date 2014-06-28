@@ -4,4 +4,6 @@ body {
 .content {
   padding: 40px 15px;
   text-align: center;
+  width: 900px;
+  margin: 0px auto;
 }
