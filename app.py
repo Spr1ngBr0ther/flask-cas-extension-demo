@@ -28,6 +28,7 @@ def route_root():
     return flask.render_template(
         'layout.html',
         username = cas.username,
+        attributes = cas.attributes,
         cas_server = app.config.get('CAS_SERVER', None)
     )
 
